@@ -12,6 +12,7 @@ public class Main {
         //octalConverter.printOctalNumber(5);
         octalConverter.convertOctalToInt("511");
         octalConverter.convertBinaryToOctal("011011");
+        octalConverter.convertIntToOctal(33);
 
     }
 

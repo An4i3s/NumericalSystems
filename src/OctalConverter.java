@@ -36,15 +36,17 @@ public class OctalConverter {
         }
     }
 
-    // TODO: 24/02/2023 what if the binary number is a 16.bits numb?
-    // TODO: 24/02/2023 implemnt convert BinarytoOctal --> divide the bits into groups of three;
-    // TODO: 24/02/2023 --> convert the group of 3 bits to octal
-
-    // TODO: 24/02/2023 accept only 0 and 1
-
-    public void convertBinaryToOctal(String binaryString) {
+    public int convertBinaryToOctal(String binaryString) {
         int bnum = Integer.parseInt(binaryString, 2);
         String ostr = Integer.toOctalString(bnum);
         System.out.println("Octal Value after conversion is: "+ostr);
+        return Integer.parseInt(ostr);
+    }
+
+    public void convertIntToOctal(int userInt){
+        BinaryConverter binaryConverter = new BinaryConverter();
+        String binary = binaryConverter.convertToBinary(userInt);
+       int octal = convertBinaryToOctal(binary);
+        System.out.println("int "+userInt+ " converted to octal is "+octal);
     }
 }
