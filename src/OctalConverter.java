@@ -43,36 +43,8 @@ public class OctalConverter {
     // TODO: 24/02/2023 accept only 0 and 1
 
     public void convertBinaryToOctal(String binaryString) {
-        String octalResultString = "";
-        int octalResultInt = 0;
-        int powerOfEight = 0;
-
-        // TODO: 24/02/2023   loop through the binary string and every 3 values
-        //  a)convert it to int  b)addition c) convert it to string d)add it to octalResulString
-        //!! order
-        for (int i = 0; i < binaryString.length(); i += 3) {
-            String tempString = binaryString.substring(i, i + 3);
-            System.out.println(tempString.toString());
-            char[] tempChar = tempString.toCharArray();
-            System.out.println(Arrays.toString(tempChar));
-            int tempIntResult = 0;
-
-            for (int x = tempChar.length-1; x>0; x--) {
-                if (tempChar[x] == '0') {
-                    octalResultInt += 0;
-                    octalResultString += String.valueOf(octalResultInt);
-                } else if (tempChar[x] == '1') {
-                    tempIntResult += Math.pow(8, powerOfEight);
-                    System.out.println("Temp octalResultInt is "+tempIntResult);
-                } else {
-                    System.out.println("invalid input. Only 0 and 1 are accepted.");
-                }
-                powerOfEight++;
-            }
-            octalResultInt += tempIntResult;
-        }
-       //return Integer.parseInt(octalResultString) ;
-        octalResultString += String.valueOf(octalResultInt);
-        System.out.println("Binary "+binaryString +" converted to octal is " +octalResultString);
+        int bnum = Integer.parseInt(binaryString, 2);
+        String ostr = Integer.toOctalString(bnum);
+        System.out.println("Octal Value after conversion is: "+ostr);
     }
 }

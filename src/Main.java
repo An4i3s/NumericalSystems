@@ -11,8 +11,6 @@ public class Main {
         OctalConverter octalConverter = new OctalConverter();
         //octalConverter.printOctalNumber(5);
         octalConverter.convertOctalToInt("511");
-
-
         octalConverter.convertBinaryToOctal("011011");
 
     }
