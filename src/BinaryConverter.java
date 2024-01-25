@@ -10,14 +10,10 @@ public class BinaryConverter {
             }
             userInput = userInput/2;
         }
-        char[] binaryResultArray = binaryResult.toCharArray();
-        String reversedBinary = "";
-        for (int i = binaryResult.length()-1; i > 0-1; i--){
-            char x = binaryResultArray[i];
-
-            reversedBinary += x;
-        }
-        return reversedBinary;
+      
+            StringBuilder reverseString = new StringBuilder(binaryResult);
+            reverseString= reverseString.reverse();
+            return reverseString.toString();
     }
     public String convertToBinary(String text){
         String binaryResult = "";
